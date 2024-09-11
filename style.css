@@ -200,3 +200,35 @@ footer {
         width: 30px; /* Smaller icon size on small screens */
     }
 }
+
+/* Portrait Mode Adjustments */
+@media (max-width: 480px) and (orientation: portrait) {
+    .hero {
+        height: 60vh; /* Adjust hero height for portrait mode */
+    }
+
+    .hero-content h1 {
+        font-size: 1.25rem;
+    }
+
+    .hero-content p {
+        font-size: 0.8rem;
+    }
+
+    .button {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    .social-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icon img {
+        width: 25px; /* Adjust icon size further for portrait mode */
+    }
+}
