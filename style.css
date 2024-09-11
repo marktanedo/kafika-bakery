@@ -222,3 +222,207 @@ footer {
 .social-icon img:hover {
     transform: scale(1.1);
 }
+
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8f8; /* Light Teal Background */
+    color: #333;
+}
+
+/* Fixed Navigation */
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #004d40; /* Teal Green */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.fixed-nav .logo img {
+    height: 40px;
+}
+
+.fixed-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.fixed-nav ul li {
+    margin: 0 10px;
+}
+
+.fixed-nav ul li a {
+    color: #ffffff; /* White */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.fixed-nav ul li a:hover {
+    color: #a7ffeb; /* Light Teal Green */
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: url('hero.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.button {
+    background-color: #00796b; /* Medium Teal Green */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Adjusted spacing */
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #004d40; /* Dark Teal Green */
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.about-section {
+    background-color: #e0f2f1; /* Very Light Teal Green */
+}
+
+.menu-section {
+    background-color: #ffffff;
+}
+
+.menu-photo {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-section {
+    background-color: #b2dfdb; /* Light Teal Green */
+}
+
+/* Social Media Section */
+.social-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #004d40; /* Teal Green */
+    color: white;
+}
+
+.social-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon img {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Parallax Section */
+.parallax-section {
+    height: 300px;
+    background: url('parallax.jpg') no-repeat center center/cover;
+}
+
+/* Footer */
+footer {
+    background-color: #004d40; /* Teal Green */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .fixed-nav ul {
+        flex-direction: column;
+    }
+
+    .fixed-nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    .social-icons {
+        flex-direction: column;
+    }
+
+    .social-icon img {
+        width: 30px; /* Smaller icon size on small screens */
+    }
+}
