@@ -158,3 +158,67 @@ hero {
 .button:hover {
     background-color: #004d40; /* Dark Teal Green */
 }
+
+/* Social Media Section */
+.social-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #004d40; /* Teal Green */
+    color: white;
+}
+
+.social-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon img {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Ensure the footer is styled similarly */
+footer {
+    background-color: #004d40; /* Teal Green */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.social-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #004d40; /* Teal Green */
+    color: white;
+}
+
+.social-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon img {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
