@@ -15,32 +15,34 @@ body {
     background-color: #004d40; /* Teal Green */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 999;
-    padding: 15px;
+    padding: 10px 20px; /* Reduced padding for mobile */
     box-sizing: border-box;
+    overflow-x: auto; /* Enable horizontal scrolling */
 }
 
 .fixed-nav .logo img {
-    height: 40px;
+    height: 30px; /* Smaller logo for mobile */
 }
 
 .fixed-nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align menu items to the start */
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Prevent wrapping of menu items */
+    overflow-x: auto; /* Enable horizontal scrolling */
 }
 
 .fixed-nav ul li {
-    margin: 0 10px;
+    margin: 0 10px; /* Spacing between menu items */
 }
 
 .fixed-nav ul li a {
     color: #ffffff; /* White */
     font-weight: bold;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px; /* Smaller font size for mobile */
     transition: color 0.3s ease;
 }
 
@@ -50,37 +52,37 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 80vh;
+    height: 50vh; /* Adjusted height for portrait mode */
     background: url('hero.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 1.75rem; /* Smaller font size for mobile */
     font-weight: bold;
     margin: 0;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 0.9rem; /* Smaller font size for mobile */
     margin: 10px 0;
 }
 
 .button {
     background-color: #00796b; /* Medium Teal Green */
     color: white;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Adjusted padding for mobile */
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    margin-top: 15px; /* Adjusted spacing */
+    margin-top: 10px; /* Adjusted spacing */
     display: inline-block;
 }
 
@@ -90,7 +92,7 @@ body {
 
 /* Section Styles */
 section {
-    padding: 60px 20px;
+    padding: 40px 15px; /* Reduced padding for mobile */
     text-align: center;
     box-sizing: border-box;
 }
@@ -114,25 +116,26 @@ section {
 
 /* Social Media Section */
 .social-section {
-    padding: 60px 20px;
+    padding: 40px 15px; /* Reduced padding for mobile */
     text-align: center;
     background-color: #004d40; /* Teal Green */
     color: white;
 }
 
 .social-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Smaller font size for mobile */
+    margin-bottom: 15px;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px; /* Reduced gap for mobile */
+    flex-wrap: wrap; /* Allows wrapping if needed */
 }
 
 .social-icon img {
-    width: 40px; /* Adjust size as needed */
+    width: 30px; /* Adjusted icon size for mobile */
     height: auto;
     transition: transform 0.3s ease;
 }
@@ -143,7 +146,7 @@ section {
 
 /* Parallax Section */
 .parallax-section {
-    height: 300px;
+    height: 200px; /* Adjusted height for mobile */
     background: url('parallax.jpg') no-repeat center center/cover;
 }
 
@@ -152,7 +155,7 @@ footer {
     background-color: #004d40; /* Teal Green */
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 15px 10px; /* Reduced padding for mobile */
 }
 
 /* Responsive Styles */
@@ -179,6 +182,18 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .fixed-nav {
+        padding: 10px 15px; /* Adjusted padding for mobile */
+    }
+
+    .fixed-nav .logo img {
+        height: 30px;
+    }
+
+    .hero {
+        height: 50vh; /* Adjusted height for mobile portrait */
+    }
+
     .hero-content h1 {
         font-size: 1.5rem;
     }
@@ -192,19 +207,32 @@ footer {
         font-size: 0.9rem;
     }
 
+    .social-section h2 {
+        font-size: 1.25rem; /* Smaller font size for mobile portrait */
+    }
+
     .social-icons {
-        flex-direction: column;
+        gap: 10px; /* Reduced gap for mobile portrait */
     }
 
     .social-icon img {
-        width: 30px; /* Smaller icon size on small screens */
+        width: 30px; /* Adjusted icon size for mobile portrait */
     }
 }
 
-/* Portrait Mode Adjustments */
 @media (max-width: 480px) and (orientation: portrait) {
+    /* Additional adjustments specifically for portrait mode */
+    .fixed-nav ul {
+        flex-direction: row;
+        overflow-x: auto; /* Enable horizontal scrolling */
+    }
+
+    .fixed-nav ul li {
+        margin: 0 5px; /* Reduced margin for portrait mode */
+    }
+
     .hero {
-        height: 60vh; /* Adjust hero height for portrait mode */
+        height: 60vh; /* Adjusted hero height for portrait mode */
     }
 
     .hero-content h1 {
@@ -225,10 +253,11 @@ footer {
     }
 
     .social-icons {
+        flex-direction: column;
         gap: 15px;
     }
 
     .social-icon img {
-        width: 25px; /* Adjust icon size further for portrait mode */
+        width: 25px; /* Smaller icon size for portrait mode */
     }
 }
