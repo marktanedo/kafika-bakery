@@ -1,255 +1,220 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Addington+CF:wght@400;700&family=Magdelin:wght@700&display=swap');
+
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f0f8f8; /* Light Teal Background */
-    color: #333;
+    font-family: Arial, sans-serif;
+    color: #0B1623; /* Dark Blue */
+    background-color: #F4F1DF; /* Beige */
 }
 
-/* Fixed Navigation */
+header {
+    background: #245D60; /* Dark Teal */
+    color: #F4F1DF; /* Beige */
+}
+
+/* Header Section */
 .fixed-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #004d40; /* Teal Green */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    padding: 15px 20px;
-    box-sizing: border-box;
-    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #245D60; /* Dark Teal */
+    padding: 15px 30px;
 }
 
-.fixed-nav .logo img {
-    height: 50px; /* Adjusted height for logo */
+.logo img {
+    height: 50px;
 }
 
-.fixed-nav ul {
+.nav-links {
     list-style: none;
     display: flex;
-    justify-content: flex-start;
+    gap: 20px;
+}
+
+.nav-links li {
     margin: 0;
-    padding: 0;
-    flex-wrap: nowrap; /* Prevent wrapping of menu items */
 }
 
-.fixed-nav ul li {
-    margin: 0 15px; /* Spacing between menu items */
-}
-
-.fixed-nav ul li a {
-    color: #ffffff; /* White */
-    font-weight: bold;
+.nav-links a {
+    color: #F4F1DF; /* Beige */
     text-decoration: none;
-    font-size: 18px; /* Font size for desktop */
-    transition: color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.fixed-nav ul li a:hover {
-    color: #a7ffeb; /* Light Teal Green */
+.nav-links a:hover {
+    color: #E07A5F; /* Muted Orange */
 }
 
 /* Hero Section */
 .hero {
-    height: 70vh; /* Hero section height */
-    background: url('hero.jpg') no-repeat center center/cover;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #F4F1DF; /* Beige */
     text-align: center;
-    color: white;
-    padding: 20px;
-    box-sizing: border-box;
+    position: relative;
+    background-color: #245D60; /* Dark Teal */
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-content h1 {
-    font-size: 3rem; /* Font size for large screens */
-    font-weight: bold;
+    font-family: 'Addington CF', serif;
+    font-size: 3.5em;
     margin: 0;
 }
 
 .hero-content p {
-    font-size: 1.5rem; /* Font size for large screens */
+    font-size: 1.5em;
     margin: 10px 0;
 }
 
 .button {
-    background-color: #00796b; /* Medium Teal Green */
-    color: white;
-    padding: 12px 24px; /* Padding for desktop */
+    background: #245D60; /* Dark Teal */
+    color: #F4F1DF; /* Beige */
+    padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
-    margin-top: 15px;
-    display: inline-block;
+    font-size: 1.2em;
+    transition: background 0.3s;
+    margin-top: 20px; /* Space between text and button */
 }
 
 .button:hover {
-    background-color: #004d40; /* Dark Teal Green */
+    background: #82B29A; /* Pale Green */
 }
 
-/* Section Styles */
-section {
-    padding: 80px 20px; /* Padding for large screens */
-    text-align: center;
-    box-sizing: border-box;
+/* Main Content */
+main {
+    padding: 20px;
 }
 
+/* About Section */
 .about-section {
-    background-color: #e0f2f1; /* Very Light Teal Green */
+    padding: 40px;
+    text-align: center;
+    background-color: #E07A5F; /* Muted Orange */
+    color: #F4F1DF; /* Beige */
 }
 
+.about-section h2 {
+    font-family: 'Addington CF', serif;
+    font-size: 2.5em;
+    color: #F4F1DF; /* Beige */
+}
+
+/* Parallax Section */
+.parallax-section {
+    height: 400px;
+    background: url('parallax.jpg') no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Menu Section */
 .menu-section {
-    background-color: #ffffff;
+    text-align: center;
+    padding: 40px;
+    background-color: #82B29A; /* Pale Green */
 }
 
-.menu-photo {
-    max-width: 100%;
-    height: auto;
+.menu-section h2 {
+    font-family: 'Addington CF', serif;
+    font-size: 2.5em;
+    color: #245D60; /* Dark Teal */
 }
 
-.contact-section {
-    background-color: #b2dfdb; /* Light Teal Green */
+.menu-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-photo, .cake-photo {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Social Media Section */
 .social-section {
-    padding: 60px 20px;
     text-align: center;
-    background-color: #004d40; /* Teal Green */
-    color: white;
+    padding: 40px;
+    background-color: #F4F1DF; /* Beige */
 }
 
 .social-section h2 {
-    font-size: 2rem; /* Font size for large screens */
-    margin-bottom: 20px;
+    font-family: 'Addington CF', serif;
+    font-size: 2.5em;
+    color: #245D60; /* Dark Teal */
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Spacing between social icons */
+    gap: 20px;
 }
 
 .social-icon img {
-    width: 40px; /* Size of social icons */
-    height: auto;
-    transition: transform 0.3s ease;
+    width: 50px;
+    transition: opacity 0.3s;
 }
 
 .social-icon img:hover {
-    transform: scale(1.1);
+    opacity: 0.7;
 }
 
-/* Parallax Section */
-.parallax-section {
-    height: 300px; /* Height for parallax effect */
-    background: url('parallax.jpg') no-repeat center center/cover;
-}
-
-/* Footer */
-footer {
-    background-color: #004d40; /* Teal Green */
-    color: white;
+/* Contact Section */
+.contact-section {
     text-align: center;
-    padding: 20px 15px; /* Padding for large screens */
+    padding: 40px;
+    background-color: #245D60; /* Dark Teal */
+    color: #F4F1DF; /* Beige */
+}
+
+.contact-section h2 {
+    font-family: 'Addington CF', serif;
+    font-size: 2.5em;
+}
+
+/* Footer Section */
+footer {
+    background: #245D60; /* Dark Teal */
+    color: #F4F1DF; /* Beige */
+    text-align: center;
+    padding: 10px 0;
 }
 
 /* Responsive Styles */
-@media (max-width: 1024px) {
-    .hero-content h1 {
-        font-size: 2.5rem; /* Adjust font size for medium screens */
-    }
-
-    .hero-content p {
-        font-size: 1.2rem;
-    }
-
-    .button {
-        padding: 10px 20px; /* Adjust padding for medium screens */
-    }
-}
-
 @media (max-width: 768px) {
-    .fixed-nav ul {
+    .nav-links {
         flex-direction: column;
-        overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+        align-items: center;
     }
 
-    .fixed-nav ul li {
-        margin: 10px 0; /* Adjusted margin for smaller screens */
-    }
-
-    .hero {
-        height: 60vh; /* Adjusted hero height for smaller screens */
+    .nav-links a {
+        margin-bottom: 10px;
     }
 
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.5em;
     }
 
     .hero-content p {
-        font-size: 1rem;
-    }
-
-    .button {
-        padding: 8px 16px; /* Adjusted padding for smaller screens */
-    }
-
-    .social-section h2 {
-        font-size: 1.5rem;
-    }
-
-    .social-icons {
-        gap: 15px; /* Reduced gap for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .fixed-nav {
-        padding: 10px 15px; /* Adjusted padding for mobile */
-    }
-
-    .fixed-nav .logo img {
-        height: 30px; /* Smaller logo for mobile */
-    }
-
-    .fixed-nav ul {
-        flex-direction: row;
-        overflow-x: auto; /* Enable horizontal scrolling */
-    }
-
-    .fixed-nav ul li {
-        margin: 0 5px; /* Reduced margin for mobile */
-    }
-
-    .hero {
-        height: 50vh; /* Adjusted hero height for mobile */
-    }
-
-    .hero-content h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero-content p {
-        font-size: 0.9rem;
-    }
-
-    .button {
-        padding: 6px 12px;
-        font-size: 0.9rem;
-    }
-
-    .social-section h2 {
-        font-size: 1.25rem;
-    }
-
-    .social-icons {
-        gap: 10px; /* Reduced gap for mobile */
-    }
-
-    .social-icon img {
-        width: 30px; /* Smaller icon size for mobile */
+        font-size: 1.2em;
     }
 }
