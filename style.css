@@ -1,3 +1,4 @@
+/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Addington+CF:wght@400;700&family=Magdelin:wght@700&display=swap');
 
 /* General Styles */
@@ -19,11 +20,11 @@ header {
     flex-direction: column;
     align-items: center;
     background: #245D60; /* Dark Teal */
-    padding: 15px 30px;
+    padding: 15px;
 }
 
 .logo {
-    margin-bottom: 10px; /* Space between logo and navigation links */
+    margin-bottom: 15px; /* Space between logo and navigation links */
 }
 
 .logo img {
@@ -34,6 +35,8 @@ header {
     list-style: none;
     display: flex;
     gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-links li {
@@ -55,7 +58,7 @@ header {
 /* Hero Section */
 .hero {
     background: url('hero-bg.jpg') no-repeat center center/cover;
-    height: 600px;
+    height: 500px; /* Adjusted height for better mobile view */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,27 +73,28 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px; /* Added padding for mobile */
 }
 
 .hero-content h1 {
     font-family: 'Addington CF', serif;
-    font-size: 3.5em;
+    font-size: 2.5em;
     margin: 0;
 }
 
 .hero-content p {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: 10px 0;
 }
 
 .button {
     background: #245D60; /* Dark Teal */
     color: #F4F1DF; /* Beige */
-    padding: 15px 30px;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1em;
     transition: background 0.3s;
     margin-top: 20px; /* Space between text and button */
 }
@@ -106,7 +110,7 @@ main {
 
 /* About Section */
 .about-section {
-    padding: 40px;
+    padding: 20px;
     text-align: center;
     background-color: #E07A5F; /* Muted Orange */
     color: #F4F1DF; /* Beige */
@@ -114,13 +118,13 @@ main {
 
 .about-section h2 {
     font-family: 'Addington CF', serif;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #F4F1DF; /* Beige */
 }
 
 /* Parallax Section */
 .parallax-section {
-    height: 400px;
+    height: 300px; /* Reduced height for better mobile view */
     background: url('parallax.jpg') no-repeat center center/cover;
     position: relative;
     overflow: hidden;
@@ -129,13 +133,13 @@ main {
 /* Menu Section */
 .menu-section {
     text-align: center;
-    padding: 40px;
+    padding: 20px;
     background-color: #82B29A; /* Pale Green */
 }
 
 .menu-section h2 {
     font-family: 'Addington CF', serif;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #245D60; /* Dark Teal */
     margin-bottom: 20px; /* Space below the heading */
 }
@@ -149,7 +153,7 @@ main {
 
 .menu-photo, .cake-photo {
     width: 90%;
-    max-width: 800px;
+    max-width: 600px; /* Adjusted max width for better mobile view */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -157,24 +161,24 @@ main {
 /* Social Media Section */
 .social-section {
     text-align: center;
-    padding: 40px;
+    padding: 20px;
     background-color: #F4F1DF; /* Beige */
 }
 
 .social-section h2 {
     font-family: 'Addington CF', serif;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #245D60; /* Dark Teal */
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .social-icon img {
-    width: 50px;
+    width: 40px; /* Adjusted size for mobile */
     transition: opacity 0.3s;
 }
 
@@ -185,14 +189,14 @@ main {
 /* Contact Section */
 .contact-section {
     text-align: center;
-    padding: 40px;
+    padding: 20px;
     background-color: #245D60; /* Dark Teal */
     color: #F4F1DF; /* Beige */
 }
 
 .contact-section h2 {
     font-family: 'Addington CF', serif;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 /* Footer Section */
@@ -208,17 +212,42 @@ footer {
     .nav-links {
         flex-direction: column;
         align-items: center;
-    }
-
-    .nav-links a {
-        margin-bottom: 10px;
+        gap: 10px;
     }
 
     .hero-content h1 {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     .hero-content p {
-        font-size: 1.2em;
+        font-size: 1em;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .about-section h2,
+    .menu-section h2,
+    .social-section h2,
+    .contact-section h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Portrait Mode */
+@media (orientation: portrait) {
+    .hero {
+        height: 400px; /* Reduced height for portrait mode */
+    }
+
+    .menu-photo, .cake-photo {
+        width: 100%;
+        max-width: none; /* Allow full width for better fit in portrait */
+    }
+
+    .social-icon img {
+        width: 35px; /* Slightly smaller for better fit */
     }
 }
