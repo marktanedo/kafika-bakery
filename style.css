@@ -28,7 +28,7 @@ header {
 }
 
 .logo img {
-    height: 50px;
+    height: 80px; /* Increased height for a larger logo */
 }
 
 .nav-links {
@@ -89,19 +89,21 @@ header {
 }
 
 .button {
-    background: #245D60; /* Dark Teal */
+    background: linear-gradient(135deg, #82B29A, #245D60); /* Gradient from Pale Green to Dark Teal */
     color: #F4F1DF; /* Beige */
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1em;
-    transition: background 0.3s;
+    font-size: 1.1em;
+    transition: background 0.3s, transform 0.3s; /* Added transform transition */
     margin-top: 20px; /* Space between text and button */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow for the button */
 }
 
 .button:hover {
-    background: #82B29A; /* Pale Green */
+    background: linear-gradient(135deg, #82B29A, #1d4d40); /* Darker gradient on hover */
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
 }
 
 /* Main Content */
