@@ -45,7 +45,7 @@ header {
 }
 
 .nav-links a {
-    color: #F4F1DF; /* Beige */
+    color: #E07A5F; /* Muted Orange */
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
@@ -53,7 +53,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #E07A5F; /* Muted Orange */
+    color: #F4F1DF; /* Beige */
 }
 
 /* Hero Section */
@@ -203,19 +203,19 @@ main {
 .contact-section a {
     color: #E07A5F; /* Muted Orange */
     text-decoration: none;
-    transition: color 0.3s;
 }
 
 .contact-section a:hover {
-    color: #F4F1DF; /* Beige */
+    text-decoration: underline;
 }
 
 /* Footer Section */
-footer {
+.footer {
     background: #245D60; /* Dark Teal */
     color: #F4F1DF; /* Beige */
     text-align: center;
     padding: 10px 0;
+    position: relative; /* Ensure proper positioning */
 }
 
 /* Responsive Styles */
