@@ -28,7 +28,7 @@ header {
 }
 
 .logo img {
-    height: 80px; /* Increased height for a larger logo */
+    height: 60px; /* Increased logo size */
 }
 
 .nav-links {
@@ -58,7 +58,7 @@ header {
 
 /* Hero Section */
 .hero {
-    background: url('hero.jpg') no-repeat center center/cover;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
     height: 500px; /* Adjusted height for better mobile view */
     display: flex;
     align-items: center;
@@ -89,21 +89,19 @@ header {
 }
 
 .button {
-    background: linear-gradient(135deg, #82B29A, #245D60); /* Gradient from Pale Green to Dark Teal */
+    background: #245D60; /* Dark Teal */
     color: #F4F1DF; /* Beige */
-    padding: 12px 24px;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1.1em;
-    transition: background 0.3s, transform 0.3s; /* Added transform transition */
+    font-size: 1em;
+    transition: background 0.3s;
     margin-top: 20px; /* Space between text and button */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow for the button */
 }
 
 .button:hover {
-    background: linear-gradient(135deg, #82B29A, #1d4d40); /* Darker gradient on hover */
-    transform: scale(1.05); /* Slightly enlarges the button on hover */
+    background: #82B29A; /* Pale Green */
 }
 
 /* Main Content */
@@ -123,17 +121,6 @@ main {
     font-family: 'Addington CF', serif;
     font-size: 2em;
     color: #F4F1DF; /* Beige */
-}
-
-.about-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 20px; /* Space above the image */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Parallax Section */
@@ -211,6 +198,16 @@ main {
 .contact-section h2 {
     font-family: 'Addington CF', serif;
     font-size: 2em;
+}
+
+.contact-section a {
+    color: #E07A5F; /* Muted Orange */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-section a:hover {
+    color: #F4F1DF; /* Beige */
 }
 
 /* Footer Section */
