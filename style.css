@@ -33,10 +33,11 @@ header {
 
 .nav-links {
     list-style: none;
-    display: flex;
-    gap: 20px;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: row; /* Horizontal layout by default */
+    gap: 20px;
 }
 
 .nav-links li {
@@ -210,9 +211,9 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        flex-direction: row; /* Horizontal layout */
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: center; /* Center the items */
     }
 
     .hero-content h1 {
@@ -249,5 +250,16 @@ footer {
 
     .social-icon img {
         width: 35px; /* Slightly smaller for better fit */
+    }
+
+    .nav-links {
+        flex-direction: row; /* Horizontal layout in portrait mode */
+    }
+}
+
+/* Landscape Mode */
+@media (orientation: landscape) {
+    .nav-links {
+        flex-direction: row; /* Horizontal layout in landscape mode */
     }
 }
