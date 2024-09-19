@@ -58,7 +58,7 @@ header {
 
 /* Hero Section */
 .hero {
-    background: url('hero.jpg') no-repeat center center/cover;
+    background: url('her.jpg') no-repeat center center/cover;
     height: 500px; /* Adjusted height for better mobile view */
     display: flex;
     align-items: center;
